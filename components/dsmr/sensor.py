@@ -8,7 +8,7 @@ from esphome.const import (
     DEVICE_CLASS_POWER,
     DEVICE_CLASS_VOLTAGE,
     ICON_EMPTY,
-    LAST_RESET_TYPE_NEVER,
+    esphome.const.ResetType.NEVER,
     STATE_CLASS_MEASUREMENT,
     STATE_CLASS_NONE,
     UNIT_AMPERE,
@@ -31,7 +31,7 @@ CONFIG_SCHEMA = cv.Schema(
             3,
             DEVICE_CLASS_ENERGY,
             STATE_CLASS_MEASUREMENT,
-            LAST_RESET_TYPE_NEVER,
+            esphome.const.ResetType.NEVER,
         ),
         cv.Optional("energy_delivered_tariff1"): sensor.sensor_schema(
             "kWh",
@@ -39,7 +39,7 @@ CONFIG_SCHEMA = cv.Schema(
             3,
             DEVICE_CLASS_ENERGY,
             STATE_CLASS_MEASUREMENT,
-            LAST_RESET_TYPE_NEVER
+            esphome.const.ResetType.NEVER
         ),
         cv.Optional("energy_delivered_tariff2"): sensor.sensor_schema(
             "kWh",
@@ -47,7 +47,7 @@ CONFIG_SCHEMA = cv.Schema(
             3,
             DEVICE_CLASS_ENERGY,
             STATE_CLASS_MEASUREMENT,
-            LAST_RESET_TYPE_NEVER,
+            esphome.const.ResetType.NEVER,
         ),
         cv.Optional("energy_returned_lux"): sensor.sensor_schema(
             "kWh",
@@ -55,7 +55,7 @@ CONFIG_SCHEMA = cv.Schema(
             3,
             DEVICE_CLASS_ENERGY,
             STATE_CLASS_MEASUREMENT,
-            LAST_RESET_TYPE_NEVER,
+            esphome.const.ResetType.NEVER,
         ),
         cv.Optional("energy_returned_tariff1"): sensor.sensor_schema(
             "kWh",
@@ -63,7 +63,7 @@ CONFIG_SCHEMA = cv.Schema(
             3,
             DEVICE_CLASS_ENERGY,
             STATE_CLASS_MEASUREMENT,
-            LAST_RESET_TYPE_NEVER,
+            esphome.const.ResetType.NEVER,
         ),
         cv.Optional("energy_returned_tariff2"): sensor.sensor_schema(
             "kWh",
@@ -71,7 +71,7 @@ CONFIG_SCHEMA = cv.Schema(
             3,
             DEVICE_CLASS_ENERGY,
             STATE_CLASS_MEASUREMENT,
-            LAST_RESET_TYPE_NEVER,
+            esphome.const.ResetType.NEVER,
         ),
         cv.Optional("total_imported_energy"): sensor.sensor_schema(
             "kvarh", ICON_EMPTY, 3, DEVICE_CLASS_ENERGY, STATE_CLASS_NONE
@@ -181,7 +181,7 @@ CONFIG_SCHEMA = cv.Schema(
             3,
             DEVICE_CLASS_EMPTY,
             STATE_CLASS_MEASUREMENT,
-            LAST_RESET_TYPE_NEVER,
+            esphome.const.ResetType.NEVER,
         ),
         cv.Optional("gas_delivered_be"): sensor.sensor_schema(
             "m³",
@@ -189,7 +189,7 @@ CONFIG_SCHEMA = cv.Schema(
             3,
             DEVICE_CLASS_EMPTY,
             STATE_CLASS_MEASUREMENT,
-            LAST_RESET_TYPE_NEVER
+            esphome.const.ResetType.NEVER
         ),
     }
 ).extend(cv.COMPONENT_SCHEMA)
