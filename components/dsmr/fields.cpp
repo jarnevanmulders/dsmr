@@ -37,21 +37,21 @@ using namespace dsmr::fields;
 // const members in the class declaration, but if their address is
 // taken, they still need a normal definition somewhere (to allocate
 // storage).
-const char units::none[];
-const char units::kWh[];
-const char units::Wh[];
-const char units::kW[];
-const char units::W[];
-const char units::V[];
-const char units::mV[];
-const char units::A[];
-const char units::mA[];
-const char units::m3[];
-const char units::dm3[];
-const char units::GJ[];
-const char units::MJ[];
-const char units::kvar[];
-const char units::kvarh[];
+// const char units::none[];
+// const char units::kWh[];
+// const char units::Wh[];
+// const char units::kW[];
+// const char units::W[];
+// const char units::V[];
+// const char units::mV[];
+// const char units::A[];
+// const char units::mA[];
+// const char units::m3[];
+// const char units::dm3[];
+// const char units::GJ[];
+// const char units::MJ[];
+// const char units::kvar[];
+// const char units::kvarh[];
 
 ObisId identification::id;
 const char identification::name_progmem[];
