@@ -376,6 +376,7 @@ DEFINE_FIELD(water_valve_position, uint8_t, ObisId(0, WATER_MBUS_ID, 24, 4, 0), 
  * (Note: 4.x spec has "hourly meter reading") */
 DEFINE_FIELD(water_delivered, TimestampedFixedValue, ObisId(0, WATER_MBUS_ID, 24, 2, 1), TimestampedFixedField, units::m3, units::dm3);
 
+DEFINE_FIELD(water_delivered_2, TimestampedFixedValue, ObisId(0, WATER_MBUS_ID, 24, 2, 3), TimestampedFixedField, units::m3, units::dm3);
 
 /* Device-Type */
 DEFINE_FIELD(slave_device_type, uint16_t, ObisId(0, SLAVE_MBUS_ID, 24, 1, 0), IntField, units::none);
