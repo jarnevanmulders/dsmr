@@ -55,284 +55,284 @@ const char units::kvarh[];
 
 ObisId identification::id;
 const char identification::name_progmem[];
-const const __FlashStringHelper *identification::name;
+const __FlashStringHelper *identification::name;
 
 ObisId p1_version::id;
 const char p1_version::name_progmem[];
-const const __FlashStringHelper *p1_version::name;
+const __FlashStringHelper *p1_version::name;
 
 /* extra field for Belgium */
 ObisId p1_version_be::id;
 const char p1_version_be::name_progmem[];
-const const __FlashStringHelper *p1_version_be::name;
+const __FlashStringHelper *p1_version_be::name;
 
 ObisId timestamp::id;
 const char timestamp::name_progmem[];
-const const __FlashStringHelper *timestamp::name;
+const __FlashStringHelper *timestamp::name;
 
 ObisId equipment_id::id;
 const char equipment_id::name_progmem[];
-const const __FlashStringHelper *equipment_id::name;
+const __FlashStringHelper *equipment_id::name;
 
 /* extra for Lux */
 ObisId energy_delivered_lux::id;
 const char energy_delivered_lux::name_progmem[];
-const const __FlashStringHelper *energy_delivered_lux::name;
+const __FlashStringHelper *energy_delivered_lux::name;
 
 ObisId energy_delivered_tariff1::id;
 const char energy_delivered_tariff1::name_progmem[];
-const const __FlashStringHelper *energy_delivered_tariff1::name;
+const __FlashStringHelper *energy_delivered_tariff1::name;
 
 ObisId energy_delivered_tariff2::id;
 const char energy_delivered_tariff2::name_progmem[];
-const const __FlashStringHelper *energy_delivered_tariff2::name;
+const __FlashStringHelper *energy_delivered_tariff2::name;
 
 /* extra for Lux */
 ObisId energy_returned_lux::id;
 const char energy_returned_lux::name_progmem[];
-const const __FlashStringHelper *energy_returned_lux::name;
+const __FlashStringHelper *energy_returned_lux::name;
 
 ObisId energy_returned_tariff1::id;
 const char energy_returned_tariff1::name_progmem[];
-const const __FlashStringHelper *energy_returned_tariff1::name;
+const __FlashStringHelper *energy_returned_tariff1::name;
 
 ObisId energy_returned_tariff2::id;
 const char energy_returned_tariff2::name_progmem[];
-const const __FlashStringHelper *energy_returned_tariff2::name;
+const __FlashStringHelper *energy_returned_tariff2::name;
 
 /* extra for Lux */
 ObisId total_imported_energy::id;
 const char total_imported_energy::name_progmem[];
-const const __FlashStringHelper *total_imported_energy::name;
+const __FlashStringHelper *total_imported_energy::name;
 
 /* extra for Lux */
 ObisId total_exported_energy::id;
 const char total_exported_energy::name_progmem[];
-const const __FlashStringHelper *total_exported_energy::name;
+const __FlashStringHelper *total_exported_energy::name;
 
 /* extra for Lux */
 ObisId reactive_power_delivered::id;
 const char reactive_power_delivered::name_progmem[];
-const const __FlashStringHelper *reactive_power_delivered::name;
+const __FlashStringHelper *reactive_power_delivered::name;
 
 /* extra for Lux */
 ObisId reactive_power_returned::id;
 const char reactive_power_returned::name_progmem[];
-const const __FlashStringHelper *reactive_power_returned::name;
+const __FlashStringHelper *reactive_power_returned::name;
 
 ObisId electricity_tariff::id;
 const char electricity_tariff::name_progmem[];
-const const __FlashStringHelper *electricity_tariff::name;
+const __FlashStringHelper *electricity_tariff::name;
 
 ObisId power_delivered::id;
 const char power_delivered::name_progmem[];
-const const __FlashStringHelper *power_delivered::name;
+const __FlashStringHelper *power_delivered::name;
 
 ObisId power_returned::id;
 const char power_returned::name_progmem[];
-const const __FlashStringHelper *power_returned::name;
+const __FlashStringHelper *power_returned::name;
 
 ObisId electricity_threshold::id;
 const char electricity_threshold::name_progmem[];
-const const __FlashStringHelper *electricity_threshold::name;
+const __FlashStringHelper *electricity_threshold::name;
 
 ObisId electricity_switch_position::id;
 const char electricity_switch_position::name_progmem[];
-const const __FlashStringHelper *electricity_switch_position::name;
+const __FlashStringHelper *electricity_switch_position::name;
 
 ObisId electricity_failures::id;
 const char electricity_failures::name_progmem[];
-const const __FlashStringHelper *electricity_failures::name;
+const __FlashStringHelper *electricity_failures::name;
 
 ObisId electricity_long_failures::id;
 const char electricity_long_failures::name_progmem[];
-const const __FlashStringHelper *electricity_long_failures::name;
+const __FlashStringHelper *electricity_long_failures::name;
 
 ObisId electricity_failure_log::id;
 const char electricity_failure_log::name_progmem[];
-const const __FlashStringHelper *electricity_failure_log::name;
+const __FlashStringHelper *electricity_failure_log::name;
 
 ObisId electricity_sags_l1::id;
 const char electricity_sags_l1::name_progmem[];
-const const __FlashStringHelper *electricity_sags_l1::name;
+const __FlashStringHelper *electricity_sags_l1::name;
 
 ObisId electricity_sags_l2::id;
 const char electricity_sags_l2::name_progmem[];
-const const __FlashStringHelper *electricity_sags_l2::name;
+const __FlashStringHelper *electricity_sags_l2::name;
 
 ObisId electricity_sags_l3::id;
 const char electricity_sags_l3::name_progmem[];
-const const __FlashStringHelper *electricity_sags_l3::name;
+const __FlashStringHelper *electricity_sags_l3::name;
 
 ObisId electricity_swells_l1::id;
 const char electricity_swells_l1::name_progmem[];
-const const __FlashStringHelper *electricity_swells_l1::name;
+const __FlashStringHelper *electricity_swells_l1::name;
 
 ObisId electricity_swells_l2::id;
 const char electricity_swells_l2::name_progmem[];
-const const __FlashStringHelper *electricity_swells_l2::name;
+const __FlashStringHelper *electricity_swells_l2::name;
 
 ObisId electricity_swells_l3::id;
 const char electricity_swells_l3::name_progmem[];
-const const __FlashStringHelper *electricity_swells_l3::name;
+const __FlashStringHelper *electricity_swells_l3::name;
 
 ObisId message_short::id;
 const char message_short::name_progmem[];
-const const __FlashStringHelper *message_short::name;
+const __FlashStringHelper *message_short::name;
 
 ObisId message_long::id;
 const char message_long::name_progmem[];
-const const __FlashStringHelper *message_long::name;
+const __FlashStringHelper *message_long::name;
 
 ObisId voltage_l1::id;
 const char voltage_l1::name_progmem[];
-const const __FlashStringHelper *voltage_l1::name;
+const __FlashStringHelper *voltage_l1::name;
 
 ObisId voltage_l2::id;
 const char voltage_l2::name_progmem[];
-const const __FlashStringHelper *voltage_l2::name;
+const __FlashStringHelper *voltage_l2::name;
 
 ObisId voltage_l3::id;
 const char voltage_l3::name_progmem[];
-const const __FlashStringHelper *voltage_l3::name;
+const __FlashStringHelper *voltage_l3::name;
 
 ObisId current_l1::id;
 const char current_l1::name_progmem[];
-const const __FlashStringHelper *current_l1::name;
+const __FlashStringHelper *current_l1::name;
 
 ObisId current_l2::id;
 const char current_l2::name_progmem[];
-const const __FlashStringHelper *current_l2::name;
+const __FlashStringHelper *current_l2::name;
 
 ObisId current_l3::id;
 const char current_l3::name_progmem[];
-const const __FlashStringHelper *current_l3::name;
+const __FlashStringHelper *current_l3::name;
 
 ObisId power_delivered_l1::id;
 const char power_delivered_l1::name_progmem[];
-const const __FlashStringHelper *power_delivered_l1::name;
+const __FlashStringHelper *power_delivered_l1::name;
 
 ObisId power_delivered_l2::id;
 const char power_delivered_l2::name_progmem[];
-const const __FlashStringHelper *power_delivered_l2::name;
+const __FlashStringHelper *power_delivered_l2::name;
 
 ObisId power_delivered_l3::id;
 const char power_delivered_l3::name_progmem[];
-const const __FlashStringHelper *power_delivered_l3::name;
+const __FlashStringHelper *power_delivered_l3::name;
 
 ObisId power_returned_l1::id;
 const char power_returned_l1::name_progmem[];
-const const __FlashStringHelper *power_returned_l1::name;
+const __FlashStringHelper *power_returned_l1::name;
 
 ObisId power_returned_l2::id;
 const char power_returned_l2::name_progmem[];
-const const __FlashStringHelper *power_returned_l2::name;
+const __FlashStringHelper *power_returned_l2::name;
 
 ObisId power_returned_l3::id;
 const char power_returned_l3::name_progmem[];
-const const __FlashStringHelper *power_returned_l3::name;
+const __FlashStringHelper *power_returned_l3::name;
 
 /* LUX */
 ObisId reactive_power_delivered_l1::id;
 const char reactive_power_delivered_l1::name_progmem[];
-const const __FlashStringHelper *reactive_power_delivered_l1::name;
+const __FlashStringHelper *reactive_power_delivered_l1::name;
 
 /* LUX */
 ObisId reactive_power_delivered_l2::id;
 const char reactive_power_delivered_l2::name_progmem[];
-const const __FlashStringHelper *reactive_power_delivered_l2::name;
+const __FlashStringHelper *reactive_power_delivered_l2::name;
 
 /* LUX */
 ObisId reactive_power_delivered_l3::id;
 const char reactive_power_delivered_l3::name_progmem[];
-const const __FlashStringHelper *reactive_power_delivered_l3::name;
+const __FlashStringHelper *reactive_power_delivered_l3::name;
 
 /* LUX */
 ObisId reactive_power_returned_l1::id;
 const char reactive_power_returned_l1::name_progmem[];
-const const __FlashStringHelper *reactive_power_returned_l1::name;
+const __FlashStringHelper *reactive_power_returned_l1::name;
 
 /* LUX */
 ObisId reactive_power_returned_l2::id;
 const char reactive_power_returned_l2::name_progmem[];
-const const __FlashStringHelper *reactive_power_returned_l2::name;
+const __FlashStringHelper *reactive_power_returned_l2::name;
 
 /* LUX */
 ObisId reactive_power_returned_l3::id;
 const char reactive_power_returned_l3::name_progmem[];
-const const __FlashStringHelper *reactive_power_returned_l3::name;
+const __FlashStringHelper *reactive_power_returned_l3::name;
 
 ObisId gas_device_type::id;
 const char gas_device_type::name_progmem[];
-const const __FlashStringHelper *gas_device_type::name;
+const __FlashStringHelper *gas_device_type::name;
 
 ObisId gas_equipment_id::id;
 const char gas_equipment_id::name_progmem[];
-const const __FlashStringHelper *gas_equipment_id::name;
+const __FlashStringHelper *gas_equipment_id::name;
 
 ObisId gas_valve_position::id;
 const char gas_valve_position::name_progmem[];
-const const __FlashStringHelper *gas_valve_position::name;
+const __FlashStringHelper *gas_valve_position::name;
 
 /* _NL */
 ObisId gas_delivered::id;
 const char gas_delivered::name_progmem[];
-const const __FlashStringHelper *gas_delivered::name;
+const __FlashStringHelper *gas_delivered::name;
 
 /* _BE */
 ObisId gas_delivered_be::id;
 const char gas_delivered_be::name_progmem[];
-const const __FlashStringHelper *gas_delivered_be::name;
+const __FlashStringHelper *gas_delivered_be::name;
 
 ObisId thermal_device_type::id;
 const char thermal_device_type::name_progmem[];
-const const __FlashStringHelper *thermal_device_type::name;
+const __FlashStringHelper *thermal_device_type::name;
 
 ObisId thermal_equipment_id::id;
 const char thermal_equipment_id::name_progmem[];
-const const __FlashStringHelper *thermal_equipment_id::name;
+const __FlashStringHelper *thermal_equipment_id::name;
 
 ObisId thermal_valve_position::id;
 const char thermal_valve_position::name_progmem[];
-const const __FlashStringHelper *thermal_valve_position::name;
+const __FlashStringHelper *thermal_valve_position::name;
 
 ObisId thermal_delivered::id;
 const char thermal_delivered::name_progmem[];
-const const __FlashStringHelper *thermal_delivered::name;
+const __FlashStringHelper *thermal_delivered::name;
 
 ObisId water_device_type::id;
 const char water_device_type::name_progmem[];
-const const __FlashStringHelper *water_device_type::name;
+const __FlashStringHelper *water_device_type::name;
 
 ObisId water_equipment_id::id;
 const char water_equipment_id::name_progmem[];
-const const __FlashStringHelper *water_equipment_id::name;
+const __FlashStringHelper *water_equipment_id::name;
 
 ObisId water_valve_position::id;
 const char water_valve_position::name_progmem[];
-const const __FlashStringHelper *water_valve_position::name;
+const __FlashStringHelper *water_valve_position::name;
 
 ObisId water_delivered::id;
 const char water_delivered::name_progmem[];
-const const __FlashStringHelper *water_delivered::name;
+const __FlashStringHelper *water_delivered::name;
 
 ObisId water_delivered_2::id;
 const char water_delivered_2::name_progmem[];
-const const __FlashStringHelper *water_delivered_2::name;
+const __FlashStringHelper *water_delivered_2::name;
 
 ObisId slave_device_type::id;
 const char slave_device_type::name_progmem[];
-const const __FlashStringHelper *slave_device_type::name;
+const __FlashStringHelper *slave_device_type::name;
 
 ObisId slave_equipment_id::id;
 const char slave_equipment_id::name_progmem[];
-const const __FlashStringHelper *slave_equipment_id::name;
+const __FlashStringHelper *slave_equipment_id::name;
 
 ObisId slave_valve_position::id;
 const char slave_valve_position::name_progmem[];
-const const __FlashStringHelper *slave_valve_position::name;
+const __FlashStringHelper *slave_valve_position::name;
 
 ObisId slave_delivered::id;
 const char slave_delivered::name_progmem[];
-const const __FlashStringHelper *slave_delivered::name;
+const __FlashStringHelper *slave_delivered::name;
 

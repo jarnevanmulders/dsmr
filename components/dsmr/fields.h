@@ -178,16 +178,26 @@ const uint8_t WATER_MBUS_ID = 2;
 const uint8_t THERMAL_MBUS_ID = 3;
 const uint8_t SLAVE_MBUS_ID = 4;
 
+// #define DEFINE_FIELD(fieldname, value_t, obis, field_t, field_args...) \
+//   struct fieldname : field_t<fieldname, ##field_args> { \
+//     value_t fieldname; \
+//     bool fieldname ## _present = false; \
+//     static ObisId id = obis; \
+//     inline static const char name_progmem[] DSMR_PROGMEM = #fieldname; \
+//     static const __FlashStringHelper *name = reinterpret_cast<const __FlashStringHelper*>(&name_progmem); \
+//     value_t& val() { return fieldname; } \
+//     bool& present() { return fieldname ## _present; } \
+//   }
 #define DEFINE_FIELD(fieldname, value_t, obis, field_t, field_args...) \
-  struct fieldname : field_t<fieldname, ##field_args> { \
+struct fieldname : field_t<fieldname, ##field_args> { \
     value_t fieldname; \
     bool fieldname ## _present = false; \
-    static ObisId id = obis; \
+    static ObisId id; /* alleen declaratie */ \
     inline static const char name_progmem[] DSMR_PROGMEM = #fieldname; \
-    static const const __FlashStringHelper *name = reinterpret_cast<const __FlashStringHelper*>(&name_progmem); \
+    static const __FlashStringHelper* name; /* alleen declaratie */ \
     value_t& val() { return fieldname; } \
     bool& present() { return fieldname ## _present; } \
-  }
+};
 
 /* Meter identification. This is not a normal field, but a
  * specially-formatted first line of the message */
