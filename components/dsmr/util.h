@@ -172,9 +172,9 @@ struct ParseResult : public _ParseResult<ParseResult<T>, T> {
 struct ObisId {
   uint8_t v[6];
 
-  constexpr ObisId(uint8_t a, uint8_t b = 255, uint8_t c = 255, uint8_t d = 255, uint8_t e = 255, uint8_t f = 255)
+  const ObisId(uint8_t a, uint8_t b = 255, uint8_t c = 255, uint8_t d = 255, uint8_t e = 255, uint8_t f = 255)
     : v{a, b, c, d, e, f} { };
-  constexpr ObisId() : v() {} // Zeroes
+  const ObisId() : v() {} // Zeroes
 
   bool operator==(const ObisId &other) const {
     return memcmp(&v, &other.v, sizeof(v)) == 0;

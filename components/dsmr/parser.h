@@ -83,7 +83,7 @@ template<> struct ParsedData<> {
 // Do not use F() for multiply-used strings (including strings used from
 // multiple template instantiations), that would result in multiple
 // instances of the string in the binary
-static constexpr char DUPLICATE_FIELD[] DSMR_PROGMEM = "Duplicate field";
+static const char DUPLICATE_FIELD[] DSMR_PROGMEM = "Duplicate field";
 
 /**
  * General case: At least one typename is passed.
@@ -158,8 +158,8 @@ struct StringParser {
 // Do not use F() for multiply-used strings (including strings used from
 // multiple template instantiations), that would result in multiple
 // instances of the string in the binary
-static constexpr char INVALID_NUMBER[] DSMR_PROGMEM = "Invalid number";
-static constexpr char INVALID_UNIT[] DSMR_PROGMEM = "Invalid unit";
+static const char INVALID_NUMBER[] DSMR_PROGMEM = "Invalid number";
+static const char INVALID_UNIT[] DSMR_PROGMEM = "Invalid unit";
 
 struct NumParser {
   static ParseResult<uint32_t> parse(size_t max_decimals, const char *unit, const char *str, const char *end) {

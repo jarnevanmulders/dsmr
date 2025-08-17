@@ -97,7 +97,7 @@ void Dsmr::receive_encrypted() {
       // system title is at byte 2 and frame counter at byte 15
       for (int i = 10; i < 14; i++)
         buffer[i] = buffer[i + 4];
-      constexpr uint16_t iv_size{12};
+      const uint16_t iv_size{12};
       gcmaes128->setIV(&buffer[2], iv_size);
       gcmaes128->decrypt(static_cast<uint8_t *>(static_cast<void *>(this->telegram_)),
                          // the cypher text start at byte 18

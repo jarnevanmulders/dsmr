@@ -150,27 +150,27 @@ namespace fields {
 
 struct units {
   // These variables are inside a struct, since that allows us to make
-  // them constexpr and define their values here, but define the storage
+  // them const and define their values here, but define the storage
   // in a cpp file. Global const(expr) variables have implicitly
   // internal linkage, meaning each cpp file that includes us will have
   // its own copy of the variable. Since we take the address of these
   // variables (passing it as a template argument), this would cause a
   // compiler warning. By putting these in a struct, this is prevented.
-  static constexpr char none[] = "";
-  static constexpr char kWh[] = "kWh";
-  static constexpr char Wh[] = "Wh";
-  static constexpr char kW[] = "kW";
-  static constexpr char W[] = "W";
-  static constexpr char V[] = "V";
-  static constexpr char mV[] = "mV";
-  static constexpr char A[] = "A";
-  static constexpr char mA[] = "mA";
-  static constexpr char m3[] = "m3";
-  static constexpr char dm3[] = "dm3";
-  static constexpr char GJ[] = "GJ";
-  static constexpr char MJ[] = "MJ";
-  static constexpr char kvar[] = "kvar";
-  static constexpr char kvarh[] = "kvarh";
+  static const char none[] = "";
+  static const char kWh[] = "kWh";
+  static const char Wh[] = "Wh";
+  static const char kW[] = "kW";
+  static const char W[] = "W";
+  static const char V[] = "V";
+  static const char mV[] = "mV";
+  static const char A[] = "A";
+  static const char mA[] = "mA";
+  static const char m3[] = "m3";
+  static const char dm3[] = "dm3";
+  static const char GJ[] = "GJ";
+  static const char MJ[] = "MJ";
+  static const char kvar[] = "kvar";
+  static const char kvarh[] = "kvarh";
 };
 
 const uint8_t GAS_MBUS_ID = 1;
@@ -182,9 +182,9 @@ const uint8_t SLAVE_MBUS_ID = 4;
   struct fieldname : field_t<fieldname, ##field_args> { \
     value_t fieldname; \
     bool fieldname ## _present = false; \
-    static constexpr ObisId id = obis; \
-    static constexpr char name_progmem[] DSMR_PROGMEM = #fieldname; \
-    static constexpr const __FlashStringHelper *name = reinterpret_cast<const __FlashStringHelper*>(&name_progmem); \
+    static const ObisId id = obis; \
+    static const char name_progmem[] DSMR_PROGMEM = #fieldname; \
+    static const const __FlashStringHelper *name = reinterpret_cast<const __FlashStringHelper*>(&name_progmem); \
     value_t& val() { return fieldname; } \
     bool& present() { return fieldname ## _present; } \
   }
