@@ -316,6 +316,10 @@ constexpr ObisId water_delivered::id;
 constexpr char water_delivered::name_progmem[];
 constexpr const __FlashStringHelper *water_delivered::name;
 
+constexpr ObisId water_delivered_2::id;
+constexpr char water_delivered_2::name_progmem[];
+constexpr const __FlashStringHelper *water_delivered_2::name;
+
 constexpr ObisId slave_device_type::id;
 constexpr char slave_device_type::name_progmem[];
 constexpr const __FlashStringHelper *slave_device_type::name;
