@@ -8,7 +8,7 @@
 namespace esphome {
 namespace dsmr_ {
 
-static const char *TAG = "dsmr";
+inline static const char *TAG = "dsmr";
 
 void Dsmr::loop() {
   if (this->decryption_key_.size() == 0)

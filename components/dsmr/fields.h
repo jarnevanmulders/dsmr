@@ -46,7 +46,7 @@ struct ParsedField {
     f.apply(*static_cast<T*>(this));
   }
   // By defaults, fields have no unit
-  static const char *unit() { return ""; }
+  inline static const char *unit() { return ""; }
 };
 
 template <typename T, size_t minlen, size_t maxlen>
@@ -97,8 +97,8 @@ struct FixedField : ParsedField<T> {
     return res;
   }
 
-  static const char *unit() { return _unit; }
-  static const char *int_unit() { return _int_unit; }
+  inline static const char *unit() { return _unit; }
+  inline static const char *int_unit() { return _int_unit; }
 };
 
 struct TimestampedFixedValue : public FixedValue {
@@ -132,7 +132,7 @@ struct IntField : ParsedField<T> {
     return res;
   }
 
-  static const char *unit() { return _unit; }
+  inline static const char *unit() { return _unit; }
 };
 
 // A RawField is not parsed, the entire value (including any
@@ -156,21 +156,21 @@ struct units {
   // its own copy of the variable. Since we take the address of these
   // variables (passing it as a template argument), this would cause a
   // compiler warning. By putting these in a struct, this is prevented.
-  static const char none[] = "";
-  static const char kWh[] = "kWh";
-  static const char Wh[] = "Wh";
-  static const char kW[] = "kW";
-  static const char W[] = "W";
-  static const char V[] = "V";
-  static const char mV[] = "mV";
-  static const char A[] = "A";
-  static const char mA[] = "mA";
-  static const char m3[] = "m3";
-  static const char dm3[] = "dm3";
-  static const char GJ[] = "GJ";
-  static const char MJ[] = "MJ";
-  static const char kvar[] = "kvar";
-  static const char kvarh[] = "kvarh";
+  inline static const char none[] = "";
+  inline static const char kWh[] = "kWh";
+  inline static const char Wh[] = "Wh";
+  inline static const char kW[] = "kW";
+  inline static const char W[] = "W";
+  inline static const char V[] = "V";
+  inline static const char mV[] = "mV";
+  inline static const char A[] = "A";
+  inline static const char mA[] = "mA";
+  inline static const char m3[] = "m3";
+  inline static const char dm3[] = "dm3";
+  inline static const char GJ[] = "GJ";
+  inline static const char MJ[] = "MJ";
+  inline static const char kvar[] = "kvar";
+  inline static const char kvarh[] = "kvarh";
 };
 
 const uint8_t GAS_MBUS_ID = 1;
@@ -182,8 +182,8 @@ const uint8_t SLAVE_MBUS_ID = 4;
   struct fieldname : field_t<fieldname, ##field_args> { \
     value_t fieldname; \
     bool fieldname ## _present = false; \
-    static const ObisId id = obis; \
-    static const char name_progmem[] DSMR_PROGMEM = #fieldname; \
+    static ObisId id = obis; \
+    inline static const char name_progmem[] DSMR_PROGMEM = #fieldname; \
     static const const __FlashStringHelper *name = reinterpret_cast<const __FlashStringHelper*>(&name_progmem); \
     value_t& val() { return fieldname; } \
     bool& present() { return fieldname ## _present; } \

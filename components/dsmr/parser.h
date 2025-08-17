@@ -67,7 +67,7 @@ template<typename... Ts> struct ParsedData;
  */
 template<> struct ParsedData<> {
   ParseResult<void> __attribute__((__always_inline__))
-  parse_line_inlined(const ObisId & /* id */, const char *str, const char * /* end */) {
+  parse_line_inlined(ObisId & /* id */, const char *str, const char * /* end */) {
     // Parsing succeeded, but found no matching handler (so return
     // set the next pointer to show nothing was parsed).
     return ParseResult<void>().until(str);
@@ -83,7 +83,7 @@ template<> struct ParsedData<> {
 // Do not use F() for multiply-used strings (including strings used from
 // multiple template instantiations), that would result in multiple
 // instances of the string in the binary
-static const char DUPLICATE_FIELD[] DSMR_PROGMEM = "Duplicate field";
+inline static const char DUPLICATE_FIELD[] DSMR_PROGMEM = "Duplicate field";
 
 /**
  * General case: At least one typename is passed.
@@ -95,7 +95,7 @@ template<typename T, typename... Ts> struct ParsedData<T, Ts...> : public T, Par
    * field with a matching id. If any, it calls it's parse method, which
    * parses the value and stores it in the field.
    */
-  ParseResult<void> parse_line(const ObisId &id, const char *str, const char *end) {
+  ParseResult<void> parse_line(ObisId &id, const char *str, const char *end) {
     return parse_line_inlined(id, str, end);
   }
 
@@ -105,7 +105,7 @@ template<typename T, typename... Ts> struct ParsedData<T, Ts...> : public T, Par
    * top-level parse_line method.
    */
   ParseResult<void> __attribute__((__always_inline__))
-  parse_line_inlined(const ObisId &id, const char *str, const char *end) {
+  parse_line_inlined(ObisId &id, const char *str, const char *end) {
     if (id == T::id) {
       if (T::present())
         return ParseResult<void>().fail((const __FlashStringHelper *) DUPLICATE_FIELD, str);
@@ -158,8 +158,8 @@ struct StringParser {
 // Do not use F() for multiply-used strings (including strings used from
 // multiple template instantiations), that would result in multiple
 // instances of the string in the binary
-static const char INVALID_NUMBER[] DSMR_PROGMEM = "Invalid number";
-static const char INVALID_UNIT[] DSMR_PROGMEM = "Invalid unit";
+inline static const char INVALID_NUMBER[] DSMR_PROGMEM = "Invalid number";
+inline static const char INVALID_UNIT[] DSMR_PROGMEM = "Invalid unit";
 
 struct NumParser {
   static ParseResult<uint32_t> parse(size_t max_decimals, const char *unit, const char *str, const char *end) {
