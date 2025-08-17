@@ -360,7 +360,11 @@ struct P1Parser {
           return res.fail(F("Invalid identification string"), line_start);
         // Offer it for processing using the all-ones Obis ID, which
         // is not otherwise valid.
-        ParseResult<void> tmp = data->parse_line(ObisId(255, 255, 255, 255, 255, 255), line_start, line_end);
+        // ParseResult<void> tmp = data->parse_line(ObisId(255, 255, 255, 255, 255, 255), line_start, line_end);
+        // Maak eerst een echte variabele van ObisId
+        ObisId id(255, 255, 255, 255, 255, 255);
+        // Gebruik deze variabele in parse_line
+        ParseResult<void> tmp = data->parse_line(id, line_start, line_end);
         if (tmp.err)
           return tmp;
         line_start = ++line_end;
